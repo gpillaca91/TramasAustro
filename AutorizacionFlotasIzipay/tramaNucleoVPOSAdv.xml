@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE isopackager SYSTEM "genericpackager.dtd">
+
+<!-- ISO 8583:1987 (ASCII) field descriptions for GenericPackager -->
+<isopackager>
+    <isofield id="0" length="4" name="MESSAGE TYPE INDICATOR" class="org.jpos.iso.IFA_NUMERIC" />
+    <isofield id="1" length="16" name="BIT MAP" class="org.jpos.iso.IFB_BITMAP" />
+    <isofield id="2" length="16" name="PAN - PRIMARY ACCOUNT NUMBER" class="org.jpos.iso.IFA_LLNUM" />
+    <isofield id="3" length="6" name="CODIGO DE PROCESO" class="org.jpos.iso.IFA_NUMERIC" />
+    <isofield id="4" length="12" name="AMOUNT, TRANSACTION" class="org.jpos.iso.IFA_NUMERIC" />
+    <isofield id="11" length="6" name="NUMERO DE IDENTIFICACION DE TRANSACCION" class="org.jpos.iso.IFA_NUMERIC" />
+    <isofield id="12" length="12" name="TIME, LOCAL TRANSACTION" class="org.jpos.iso.IFA_NUMERIC" />
+    <isofield id="14" length="4" name="DATE, EXPIRATION" class="org.jpos.iso.IFA_NUMERIC" />
+    <isofield id="18" length="4" name="CODIGO ACTIVIDAD NACIONAL DE ESTABLECIMIENTO" class="org.jpos.iso.IFA_NUMERIC" />
+    <isofield id="22" length="12" name="DATO DE PUNTO DE SERVICIO" class="org.jpos.iso.IFA_NUMERIC" />
+    <isofield id="24" length="3" name="CODIGO FUNCION" class="org.jpos.iso.IFA_NUMERIC" />
+    <isofield id="25" length="4" name="CODIGO DE RAZON" class="org.jpos.iso.IFA_NUMERIC" />
+    <isofield id="26" length="4" name="CODIGO DE ACTIVIDAD INTERNACIONAL ISO" class="org.jpos.iso.IFA_NUMERIC" />
+    <isofield id="32" length="8" name="CODIGO DE IDENTIFICACION DEL ADQUIRENTE" class="org.jpos.iso.IFA_LLCHAR" />
+    <isofield id="33" length="06" name="CODIGO DE IDENTIFICACION DEL PRESENTADOR" class="org.jpos.iso.IFA_NUMERIC" />
+    <isofield id="37" length="12" name="NUMERO DE REFERENCIA" class="org.jpos.iso.IFA_NUMERIC" />
+    <isofield id="38" length="6" name="CODIGO AUTORIZACION" class="org.jpos.iso.IF_CHAR" />
+    <isofield id="39" length="3" name="CODIGO DE ACCION" class="org.jpos.iso.IFA_NUMERIC" />
+    <isofield id="41" length="8" name="TERMINAL IDENTIFICACION" class="org.jpos.iso.IF_CHAR" />
+    <isofield id="42" length="15" name="IDENTIFICACION DEL ESTABLECIMIENTO" class="org.jpos.iso.IF_CHAR" />
+
+    <isofieldpackager name="NOMBRE Y LOCALIDAD DEL ESTABLECIMIENTO" id="43" length="40" class="org.jpos.iso.IF_CHAR" packager="org.jpos.iso.packager.GenericSubFieldPackager" emitBitmap="false" firstField="1" maxValidField="3">
+        <isofield id="1" length="25" name="NOMBRE ESTABLECIMIENTO" class="org.jpos.iso.IF_CHAR" />
+        <isofield id="2" length="13" name="CIUDAD DEL ESTABLECIMIENTO" class="org.jpos.iso.IF_CHAR" />
+        <isofield id="3" length="2" name="PAIS DEL ESTABLECIMIENTO" class="org.jpos.iso.IF_CHAR" />
+    </isofieldpackager>
+
+    <isofieldpackager name="DATOS ADICIONALES DE TRANSACCION" id="48" length="999" class="org.jpos.iso.IFA_LLLCHAR" packager="org.jpos.iso.packager.GenericSubFieldPackager" emitBitmap="false" firstField="1">
+        <isofield id="1" length="9" name="PLACA VEHICULO" class="org.jpos.iso.IF_CHAR" />
+        <isofield id="2" length="6" name="KILOMETRAJE VEHICULO" class="org.jpos.iso.IFA_NUMERIC" />
+        <isofield id="3" length="18" name="DOCUMENTO DE IDENTIDAD" class="org.jpos.iso.IF_CHAR" />
+        <isofield id="4" length="12" name="PIN CONDUCTOR" class="org.jpos.iso.IF_CHAR" />
+        <isofield id="5" length="20" name="NOMBRE UNIDAD EJECUTORA" pad="true" class="org.jpos.iso.IF_CHAR" />
+        <isofield id="6" length="12" name="SALDO" pad="true" class="org.jpos.iso.IFA_NUMERIC" />
+        <isofield id="7" length="20" name="NOMBRE CONDUCTOR" pad="true" class="org.jpos.iso.IF_CHAR" />
+        <isofield id="8" length="6" pad="true" name="CANTIDAD DE GALONES/LITROS" class="org.jpos.iso.IFA_NUMERIC" />
+        <isofield id="9" length="2" pad="true" name="TIPO COMBUSTIBLE" class="org.jpos.iso.IF_CHAR" />
+        <isofield id="10" length="6" pad="true" name="CODIGO UNIDAD EJECUTORA" class="org.jpos.iso.IF_CHAR" />
+        <isofield id="11" length="25" pad="true" name="NOMBRE EMISOR" class="org.jpos.iso.IF_CHAR" />
+    </isofieldpackager>
+
+    <isofield id="49" length="3" name="CODIGO DE MONEDA DE TRANSACCION" class="org.jpos.iso.IFA_NUMERIC" />
+    <isofield id="53" length="16" name="INFORMACION DE CONTROL DE SEGURIDAD" class="org.jpos.iso.IFA_NUMERIC" />
+    <isofield id="54" length="150" name="DATA ORIGINAL" class="org.jpos.iso.IF_CHAR" />
+
+    <isofieldpackager name="DATOS ADICIONALES DE REEIMPRESION" id="55" length="999" class="org.jpos.iso.IF_CHAR" packager="org.jpos.iso.packager.GenericSubFieldPackager" emitBitmap="false" firstField="1">
+        <isofield id="1" length="9" name="PLACA VEHICULO" class="org.jpos.iso.IF_CHAR" />
+        <isofield id="2" length="6" name="KILOMETRAJE VEHICULO" class="org.jpos.iso.IFA_NUMERIC" />
+        <isofield id="3" length="18" name="DOCUMENTO DE IDENTIDAD" class="org.jpos.iso.IF_CHAR" />
+        <isofield id="4" length="20" name="NOMBRE UNIDAD EJECUTORA" pad="true" class="org.jpos.iso.IF_CHAR" />
+        <isofield id="5" length="12" name="SALDO" pad="true" class="org.jpos.iso.IFA_NUMERIC" />
+        <isofield id="6" length="20" name="NOMBRE CONDUCTOR" pad="true" class="org.jpos.iso.IF_CHAR" />
+        <isofield id="7" length="5" pad="true" name="CANTIDAD DE GALONES/LITROS" class="org.jpos.iso.IFA_NUMERIC" />
+        <isofield id="8" length="2" pad="true" name="TIPO COMBUSTIBLE" class="org.jpos.iso.IF_CHAR" />
+        <isofield id="9" length="6" pad="true" name="CODIGO UNIDAD EJECUTORA" class="org.jpos.iso.IF_CHAR" />
+        <isofield id="10" length="25" pad="true" name="NOMBRE DEL EMISOR" class="org.jpos.iso.IF_CHAR" />
+    </isofieldpackager>
+
+    <isofieldpackager name="DATOS DE LA TRANSACCION ORIGINAL" id="56" length="35" class="org.jpos.iso.IFA_LLCHAR" packager="org.jpos.iso.packager.GenericSubFieldPackager" emitBitmap="false" pad="true" firstField="1">
+        <isofield id="1" length="4" name="Tipo mensaje" class="org.jpos.iso.IF_CHAR" />
+        <isofield id="2" length="6" name="Numero de identificacion de transaccion" class="org.jpos.iso.IFA_NUMERIC" />
+        <isofield id="3" length="12" name="Fecha y hora de la transaccion" class="org.jpos.iso.IFA_NUMERIC" />
+        <isofield id="4" length="8" name="Codigo de identificacion del adquiriente" class="org.jpos.iso.IFA_NUMERIC" />
+    </isofieldpackager>
+
+    <isofield id="93" length="13" name="CODIGO IDENTIFICACION DESTINO" class="org.jpos.iso.IFA_LLCHAR" />
+    <isofield id="94" length="13" name="CODIGO IDENTIFICACION ORIGEN" class="org.jpos.iso.IFA_LLCHAR" />
+</isopackager>

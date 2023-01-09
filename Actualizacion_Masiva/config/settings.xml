@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<configuration>
+    <master name="masterBackup"
+        desc="configuraci�n maestra para casos donde no hay conexi�n de base de datos">
+        <timeinterval desc="interval time in seconds">30</timeinterval>
+        <timewait desc="interval time for wait the next proccess in seconds">5</timewait>
+        <gmt desc="Formato de zonas horarias">GMT-5:00</gmt>
+    </master>
+    <provider name="simuladorAdquirentes"
+        desc="proveedor de datos para los simuladores de adquirentes">
+        <databases desc="Pool de bases de datos">
+            <database name="db2Manager"
+                desc="base de datos MySql para administracion de la aplicacion" turn="off">
+                <driver>mysql</driver>
+                <server>localhost</server>
+                <port>0000</port>
+                <schema>nombre</schema>
+                <user>usuario</user>
+                <password>password</password>
+            </database>
+        </databases>
+        <configManager name="confAdq" desc="Administracion de configuraciones para el proveedor">
+            <hostCanal>localhost</hostCanal>
+            <portCanal>6009</portCanal>
+            <timeout desc="Tiempo promedio en segundos para declarar una transacci�n como">20</timeout>
+        </configManager>
+    </provider>
+</configuration>

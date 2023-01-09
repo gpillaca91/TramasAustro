@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="dist/Consola.jar"/>
+	<classpathentry kind="lib" path="dist/lib/activation.jar"/>
+	<classpathentry kind="lib" path="dist/lib/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="dist/lib/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="dist/lib/commons-configuration-1.0.jar"/>
+	<classpathentry kind="lib" path="dist/lib/commons-digester.jar"/>
+	<classpathentry kind="lib" path="dist/lib/commons-lang-2.0.jar"/>
+	<classpathentry kind="lib" path="dist/lib/commons-logging-api.jar"/>
+	<classpathentry kind="lib" path="dist/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="dist/lib/db2java-9.7.jar"/>
+	<classpathentry kind="lib" path="dist/lib/db2jcc_license_cu-9.7.jar"/>
+	<classpathentry kind="lib" path="dist/lib/db2jcc-9.7.jar"/>
+	<classpathentry kind="lib" path="dist/lib/db2jcc4-9.7.jar"/>
+	<classpathentry kind="lib" path="dist/lib/jbase-1.0.0 .jar"/>
+	<classpathentry kind="lib" path="dist/lib/mail.jar"/>
+	<classpathentry kind="lib" path="dist/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="dist/lib/sqljdbc4-3.0.jar"/>
+	<classpathentry kind="lib" path="dist/lib/xerces.jar"/>
+	<classpathentry kind="lib" path="lib/activation.jar"/>
+	<classpathentry kind="lib" path="lib/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="lib/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-configuration-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-digester.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang-2.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-api.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="lib/db2-db2jcc-license-cu-8.1.jar"/>
+	<classpathentry kind="lib" path="lib/db2-java-8.1.jar"/>
+	<classpathentry kind="lib" path="lib/db2-jcc-8.1.jar"/>
+	<classpathentry kind="lib" path="lib/db2-jcc-license-cisuz-8.1.jar"/>
+	<classpathentry kind="lib" path="lib/db2java-9.7.jar"/>
+	<classpathentry kind="lib" path="lib/db2jcc_license_cu-9.7.jar"/>
+	<classpathentry kind="lib" path="lib/db2jcc-9.7.jar"/>
+	<classpathentry kind="lib" path="lib/db2jcc4-9.7.jar"/>
+	<classpathentry kind="lib" path="lib/jbase-1.0.0 .jar"/>
+	<classpathentry kind="lib" path="lib/jxl-2.6.10.jar"/>
+	<classpathentry kind="lib" path="lib/mail.jar"/>
+	<classpathentry kind="lib" path="lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="lib/sqljdbc4-3.0.jar"/>
+	<classpathentry kind="lib" path="lib/xerces.jar"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="target/generated-sources/annotations">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="ignore_optional_problems" value="true"/>
+			<attribute name="m2e-apt" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="ignore_optional_problems" value="true"/>
+			<attribute name="m2e-apt" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
