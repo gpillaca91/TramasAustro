@@ -6,12 +6,12 @@ package app.consola;
 
 import COM.ibm.db2.jdbc.app.DB2Driver;
 import com.microsoft.sqlserver.jdbc.SQLServerDriver;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Hashtable;
 import java.util.logging.Logger;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 public class ConnectionDatabase {
 

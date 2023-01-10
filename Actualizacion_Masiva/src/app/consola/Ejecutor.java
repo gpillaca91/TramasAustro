@@ -106,8 +106,8 @@ public class Ejecutor {
                         ois.close();
                         oos.close();
                         this.conexion.close();
-
                     } else {
+                        log.info("Inicio validación trama");
                         long timeToWait = 25L;
                         long timeout = 1000L;
                         Parser parser = new Parser();
@@ -184,7 +184,7 @@ public class Ejecutor {
                 }
 
             } catch (Exception e) {
-                log.info("Ocurrio una excepcion " + e.getCause() + " " + e.getMessage());
+                log.info("Ocurrio una excepcion en run() " + e.getCause() + " " + e.getMessage());
                 // try {
                 // this.flujoSalida.close();
                 // } catch (IOException e1) {
@@ -213,6 +213,7 @@ public class Ejecutor {
                     conexionEntrante = serverSocket.accept();
                     conexionEntrante.setSoTimeout(timeout);
                 } catch (SocketTimeoutException e) {
+//                    log.info("ERROR SocketTimeoutException");
                     continue;
                 }
                 log.info("Se ha aceptado una conexion");
@@ -310,7 +311,7 @@ public class Ejecutor {
             LogManager.getLogManager().readConfiguration(new FileInputStream(logURL.getFile()));
             Logger log = Logger.getLogger(Ejecutor.class.getName());
             ejec.setLogObject(log);
-            ejec.IniciarEjecutor(12164, 20);
+            ejec.IniciarEjecutor(12164, 30);
 
         } catch (Exception e) {
             e.printStackTrace();
